@@ -24,15 +24,15 @@ c = a;
 ### Your solution here:
 1.  What is `a`?
 ```
-a is ...
+a is bongos
 ```
 2.  What is `b`?
 ```
-b is ...
+b is true
 ```
 3.  What is `c`?
 ```
-c is ...
+c is bongos
 ```
 
 ## Concatenation
@@ -52,7 +52,7 @@ Result should be:
 ### Your solution here:
 4.  Fill in the `console.log()`?
 ```js
-console.log()
+console.log(firstWord + " " + secondWord + " " + thirdWord + " " + fourthWord)
 ```
 
 
@@ -71,14 +71,14 @@ h) 9 !== 8 + 1
 ### Your solution here:
 7.  Write `true` or `false` based on the list above
 ```
-a) 
-b)  
-c)
-d) 
-e) 
-f) 
-g) 
-h) 
+a) false
+b) true
+c) false
+d) false
+e) false
+f) false
+g) true
+h) false
 ```
 
 ## Conditionals
@@ -94,6 +94,17 @@ Write a conditional statement that...
 8.  Write your javascript solution below
 ```js
 // your answer here
+let number = 9
+
+if(number % 5 === 0 && number % 3 === 0) {
+  console.log('FizzBuzz')
+} else if (number % 3 === 0){
+  console.log('Fizz')
+} else if (number % 5 === 0){
+  console.log('Buzz')
+} else {
+  console.log(number)
+}
 ```
 
 ## Functions
@@ -106,12 +117,45 @@ Define a function `currencyConverter` that takes two arguments an amount and a c
 > - 1 Riyal = 4.68 Egyptian pound 
 > - 1 Riyal = 0.10 Bahraini dinar
 
+```js
+function currencyConverter(currency, amount){
+  if( currency === "USD"){
+    console.log(amount / 0.27)
+  } else if (currency === "GBP"){
+    console.log(amount / .21)
+  } else if (currency === "EGP"){
+    console.log(amount / 4.68)
+  } else if (currency === "BD"){
+    console.log(amount / .10)
+  } else {
+    console.log('We only have (USD,GBP,EGP,BD) currencies')
+  }
+}
+
+currencyConverter('BD', 2) // Result: 20
+```
 ---
 
 ### isCharacterAVowel(character)
 
 Write a function `isCharacterAVowel` that takes a character (i.e. a string of length 1) and returns true if it is a vowel and false, otherwise.
 
+```js
+function isCharacterAVowel(character){
+  if(character.toUpperCase() === "A" || character.toUpperCase() === "E" 
+  || character.toUpperCase() === "I" || character.toUpperCase() === "O" 
+  || character.toUpperCase() === "U" || character.toUpperCase() === "Y")
+  {
+    console.log(true)
+  } 
+  else {
+    console.log(false)
+  }
+}
+
+isCharacterAVowel("y") // Result: true
+isCharacterAVowel("r") // Result: false
+```
 ---
 
 ## [Homework submission how to!](https://git.generalassemb.ly/sei-jeddah/sei-12/blob/master/lessons/week_1/day_2/Homework-Submission.md)
